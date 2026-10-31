@@ -1,0 +1,2 @@
+import type {MetadataRoute} from "next";
+export default function manifest():MetadataRoute.Manifest{return{name:"Bella del Gelato Inventory",short_name:"Bella Gelato",description:"Your gelato kitchen, beautifully organised.",start_url:"/",display:"standalone",background_color:"#f7f7f2",theme_color:"#f7f7f2",orientation:"portrait-primary",icons:[{src:"/bella-icon.svg",sizes:"any",type:"image/svg+xml",purpose:"maskable"}]}}

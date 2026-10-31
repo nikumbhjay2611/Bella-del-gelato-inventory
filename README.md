@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bella del Gelato Inventory
 
-## Getting Started
+A phone-first Next.js + Supabase inventory and production app for one gelato shop owner. Includes an installable PWA shell, secure owner sign-in, row-level database access, ingredient and base-batch tracking, recipes, production deductions, Excel reports, and an owner-only weekly report email job.
 
-First, run the development server:
+## Start here
 
-```bash
+Follow [SETUP.md](./SETUP.md) to create the Supabase project, provision the owner, configure secrets, and deploy this directory to Vercel. Do not add actual passwords, service-role keys, mail keys, or cron secrets to source control.
+
+## Development
+
+Requires Node.js 22 or newer (`.nvmrc` specifies 24).
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The database migration is in `supabase/migrations/`. Apply it once to a new Supabase project before signing into the app. Local `.env.local` is ignored by Git.
